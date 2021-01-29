@@ -1,0 +1,298 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    scroll-behavior: smooth;
+}
+.container {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* Hero */
+#hero {
+    background: url('../img/img-1.jpg');
+    background-size: cover;
+    background-position: top center;
+    position: relative;
+    z-index: 1;
+}
+#hero::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: .4;
+    z-index: -1;
+}
+#hero .hero {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 50px;
+    justify-content: flex-start;
+}
+#hero .hero-info-heading {
+    display: block;
+    width: fit-content;
+    font-size: 4rem;
+    position: relative;
+    color: #fff;
+    letter-spacing: .4rem;
+    animation: fadeIn 1s ease;
+    transition: 1s ease all;
+}
+#hero .hero-info-subheading {
+    display: block;
+    width: fit-content;
+    color: crimson;
+    font-size: 2rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: .6rem;
+    animation: fadeIn 1s ease backwards;
+    animation-delay: 1s;
+}
+#hero .hero-info-underline{
+    /* display: block; */
+    height: .4rem;
+    width: 100%;
+    background-color: crimson;
+    border-radius: 10px;
+    animation: fadeIn 1s ease backwards;
+    animation-delay: 1s;
+}
+#hero .hero-info-button {
+    margin-top: 20px;
+    padding: 1rem 3rem;
+    font-size: 2rem;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 900;
+    display: inline-block;
+    background-color: rgba(220, 20, 60, 0.9);
+    border-radius: 30px;
+    animation: moveInLeft 1s ease backwards;
+    animation-delay: 1.5s;
+}
+/* End Hero */
+
+/* Menu */
+#menu {
+    width: 100%;
+    height: 100vh;
+}
+#menu .menu {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: .3s ease transform;
+}
+#menu .menu-header {
+    margin: 5rem 5rem;
+}
+#menu .menu-header-heading {
+    font-size: 4rem;
+    margin-bottom: 10px;
+}
+#menu .menu-header-subheading {
+    font-size: 2rem;
+    text-align: center;
+}
+#menu .menu-info {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    flex-direction: column;
+}
+#menu .menu-info a {
+    width: 100%;
+    text-decoration: none;
+    color: whitesmoke;
+}
+#menu .flip-card {
+    width: 100%;
+    min-height: 200px;
+    position: relative;
+    transition: .5s ease transform;
+    position: relative;
+    margin: 5px;
+    perspective: 1000px;
+}
+#menu .flip-card-inner {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    transform-style: preserve-3d;
+    transition: .5s ease transform;
+    display: block;
+}
+#menu .flip-card-front,
+#menu .flip-card-back {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(60deg, rgba(220, 20, 60, 0.8), rgba(0, 0, 0, 0.8));
+    padding: 10px;
+}
+#menu .menu-button:nth-child(1) .flip-card-front {
+    background-image: url("../img/pizza.jpg");
+    background-size: cover;
+    position: relative;
+}
+#menu .menu-button:nth-child(2) .flip-card-front {
+    background-image: url("../img/pasta.jpg");
+    background-size: cover;
+    position: relative;
+}
+#menu .menu-button:nth-child(3) .flip-card-front {
+    background-image: url("../img/salad.jpg");
+    background-size: cover;
+    position: relative;
+}
+#menu .flip-card-back {
+    z-index: 10;
+    transform: rotateY(180deg)
+}
+#menu .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+#menu .flip-card-front .flip-card-heading {
+    font-size: 3rem;
+    width: 70%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-top: 20px;
+    transform: translateX(-50%);
+    border-radius: 30px;
+    background-color: rgba(255, 255, 255, 0.4);
+}
+#menu .flip-card-back .flip-card-heading {
+    font-size: 2rem;
+}
+/* End Menu */
+
+
+/* Modal */
+.modal-pizza, .modal-pasta, .modal-salad {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.5); /* Black w/ opacity */
+}
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    border: 1px solid #888;
+    width: 85%;
+    height: 80%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.close {
+    display: block;
+    color: #aaa;
+    top: 1rem;
+    right: 2rem;
+    font-size: 2.8rem;
+    font-weight: 500;
+    font-size: 4rem;
+    margin: 0 auto;
+}
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+p.modal-menu {
+    font-size: 4rem;
+}
+.pizza-item {
+    display: block;
+    text-align: left;
+    margin: 5px 50px;
+    border: 1px solid black;
+}
+/* End Modal */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Keyframes */
+@keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-150px);
+    }
+
+    50% {
+        opacity: .5;
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+/* End Keyframes */

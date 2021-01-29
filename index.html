@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juliany Pizza</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Hero -->
+    <section id="hero">
+        <div class="hero container">
+            <div class="hero-info">
+                <h1 class="hero-info-heading">Juliany Pizza</h1>
+                <p class="hero-info-subheading">Making People Happy</p>
+                <div class="hero-info-underline"></div>
+                <a href="#menu" type="button" class="hero-info-button">Menu</a>
+            </div> <!-- /hero-info-->
+        </div> <!-- /hero -->
+    </section>
+    <!-- End Hero -->
+
+    <!-- Menu -->
+    <section id="menu">
+        <div class="menu container">
+            <div class="menu-header">
+                <h1 class="menu-header-heading">Our Menu</h1>
+                <p class="menu-header-subheading">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa, tempora.</p>
+            </div> <!-- /menu-header -->
+
+            <div class="menu-info">
+
+                <!-- Pizza Card -->
+                <a data-target="#modal-pizza" data-toggle="modal" class="menu-button" id="btn-pizza" href="#modal-pizza">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <h1 class="flip-card-heading">Pizza</h1>
+                            </div> <!-- /flip-card-front"> -->
+                            <div class="flip-card-back">
+                                <h1 class="flip-card-heading">Click To Choose</h1>
+                            </div> <!-- /flip-card-back -->
+                        </div> <!-- /flip-card-inner -->
+                    </div> <!-- /flip-card -->
+                </a>
+                <!-- End Pizza Card -->
+
+                <!-- Pasta Card -->
+                <a data-target="#modal-pasta" data-toggle="modal" class="menu-button" id="btn-pasta" href="#modal-pasta">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <h1 class="flip-card-heading">Pasta</h1>
+                            </div> <!-- /flip-card-front"> -->
+                            <div class="flip-card-back">
+                                <h1 class="flip-card-heading">Click To Choose</h1>
+                            </div> <!-- /flip-card-back -->
+                        </div> <!-- /flip-card-inner -->
+                    </div> <!-- /flip-card -->
+                </a>
+                <!-- End Pasta Card -->
+
+                <!-- Salads Card -->
+                <a data-target="#modal-salad" data-toggle="modal" class="menu-button" id="btn-salad" href="#modal-salad">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <h1 class="flip-card-heading">Salads</h1>
+                            </div> <!-- /flip-card-front -->
+                            <div class="flip-card-back">
+                                <h1 class="flip-card-heading">Click To Choose</h1>
+                            </div> <!-- /flip-card-back -->
+                        </div> <!-- /flip-card-inner -->
+                    </div> <!-- /flip-card -->
+                </a>
+                <!-- End Salads Card -->
+
+                <!-- Pizza Modal -->
+                <div id="modal-pizza" class="modal modal-pizza">
+                    <div class="modal-content">
+                        <div class="close">
+                            <span>&times;</span>
+                        </div>
+                        <!-- <p class="modal-menu">Pizza menu...</p> -->
+                        <div class="pizza-item">
+                            <h1>Margharitta</h1>
+                            <p></p>
+                            <span>BGN 3.00</span>
+                        </div>
+                        <div class="pizza-item">
+                            <h1>Prochuto</h1>
+                            <span>BGN 4.80</span>
+                        </div>
+                    </div> <!-- /modal-content -->
+                </div> <!-- /modal -->
+                <!-- End Pizza Modal -->
+
+                <!-- Pasta Modal -->
+                <div id="modal-pasta" class="modal modal-pasta">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <p class="modal-menu">Pasta menu...</p>
+                    </div> <!-- /modal-content -->
+                </div> <!-- /modal -->
+                <!-- End Pasta Modal -->
+
+                <!-- Salad Modal -->
+                <div id="modal-salad" class="modal modal-salad">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <p class="modal-menu">Salad menu...</p>
+                    </div> <!-- /modal-content -->
+                </div> <!-- /modal -->
+                <!-- End Salad Modal -->
+
+            </div> <!-- /menu-info -->
+        </div> <!-- /menu -->
+    </section>
+    <!-- End Menu -->
+
+    <!-- JS -->
+    <script src="./app.js"></script>
+</body>
+</html>
