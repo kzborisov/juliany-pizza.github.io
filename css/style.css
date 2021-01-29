@@ -220,6 +220,11 @@ img {
     position: relative;
     display: flex;
     flex-direction: column;
+    overflow: scroll;
+}
+.modal-content hr {
+    width: 80%;
+    margin: 0 auto;
 }
 .close {
     display: block;
@@ -237,14 +242,30 @@ img {
     text-decoration: none;
     cursor: pointer;
 }
-p.modal-menu {
-    font-size: 4rem;
-}
 .pizza-item {
-    display: block;
+    flex-direction: row;
     text-align: left;
+    height: auto;
     margin: 5px 50px;
-    border: 1px solid black;
+    /* border: 1px solid black; */
+    position: relative;
+}
+.pizza-item h1 {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+.pizza-item p {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    /* top: 60%; */
+}
+.pizza-item .price {
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    transform: translate(-50%, -50%);    
+    font-size: 1.3rem;
 }
 /* End Modal */
 
