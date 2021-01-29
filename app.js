@@ -1,11 +1,11 @@
 // Pizza menu
-const card_pizza = document.querySelector('#btn-pizza .flip-card-back');
+const card_pizza = document.querySelector('#btn-pizza .flip-card');
 const modal_pizza = document.querySelector('#modal-pizza');
 const span_pizza = document.querySelector('#menu .modal-pizza .close');
-const card_pasta = document.querySelector('#btn-pasta .flip-card-back');
+const card_pasta = document.querySelector('#btn-pasta .flip-card');
 const modal_pasta = document.querySelector('#modal-pasta');
 const span_pasta = document.querySelector('#menu .modal-pasta .close');
-const card_salad = document.querySelector('#btn-salad .flip-card-back');
+const card_salad = document.querySelector('#btn-salad .flip-card');
 const modal_salad = document.querySelector('#modal-salad');
 const span_salad = document.querySelector('#menu .modal-salad .close');
 
