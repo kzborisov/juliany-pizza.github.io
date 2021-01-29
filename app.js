@@ -1,15 +1,17 @@
-// Pizza menu
+// Pizza
 const card_pizza = document.querySelector('#btn-pizza .flip-card');
 const modal_pizza = document.querySelector('#modal-pizza');
 const span_pizza = document.querySelector('#menu .modal-pizza .close');
+// Past
 const card_pasta = document.querySelector('#btn-pasta .flip-card');
 const modal_pasta = document.querySelector('#modal-pasta');
 const span_pasta = document.querySelector('#menu .modal-pasta .close');
+// Salads
 const card_salad = document.querySelector('#btn-salad .flip-card');
 const modal_salad = document.querySelector('#modal-salad');
 const span_salad = document.querySelector('#menu .modal-salad .close');
 
-
+// Pizza
 card_pizza.addEventListener('click', () => {
     modal_pizza.style.display = "block";
 });
@@ -19,6 +21,7 @@ span_pizza.onclick = function() {
     modal_pizza.style.display = "none";
 };
 
+// Pasta
 card_pasta.addEventListener('click', () => {
     modal_pasta.style.display = "block";
 });
@@ -28,6 +31,7 @@ span_pasta.onclick = function() {
     modal_pasta.style.display = "none";
 };
 
+// Salad
 card_salad.addEventListener('click', () => {
     modal_salad.style.display = "block";
 });
