@@ -242,8 +242,7 @@ a {
     border-radius: 30px;
     animation: moveInLeft 1s ease backwards;
     animation-delay: 1.5s;
-    min-width: 40%;
-    max-width: 50%;
+    width: 80%;
     text-align: center;
 }
 /* End Hero */
