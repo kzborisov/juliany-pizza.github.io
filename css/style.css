@@ -606,6 +606,9 @@ a {
         font-size: 1.6rem;
         margin-top: 1rem;
     }
+    #hero .hero-info-button {
+        padding: 1rem 5rem;
+    }
 } 
 /* TABLET */
 @media only screen and (min-width: 768px) {
