@@ -42,11 +42,11 @@ a {
 }
 #header .brand h1 {
     color: #fff;
-    font-size: 1.6rem;
+    font-size: 2.8rem;
 }
 #header .brand h1 span{
     color: crimson;
-    font-size: 1.7rem;
+    font-size: 2.9rem;
 }
 #header .header {
 	min-height: 8vh;
@@ -376,8 +376,9 @@ a {
     z-index: 1;
     left: 0;
     top: 50px;
-    max-width: 1200px;
+    /* max-width: 1200px; */
     height: 100%;
+    width: 100%;
     overflow: auto;
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.5); /* Black w/ opacity */
@@ -588,3 +589,117 @@ a {
 /* End Keyframes */
 
 /* =================================================================== *
+
+/* Media Queries */
+/* Phone */
+@media only screen and (max-width: 400px) {
+
+    #hero .hero-info-underline {
+        max-width: 90%;
+        text-align: left;
+        margin: 1rem 0;
+    }
+    #hero .hero-info-heading {
+        font-size: 2.8rem;
+    }
+    #hero .hero-info-subheading {
+        font-size: 1.6rem;
+        margin-top: 1rem;
+    }
+} 
+/* TABLET */
+@media only screen and (min-width: 768px) {
+    /* Header */
+    #header .brand h1 {
+        font-size: 2.8rem;
+    }
+    #header .brand h1 span{
+        font-size: 2.9rem;
+    }
+    /* End Header */
+
+    /* Hero */
+    #hero .hero-info {
+        position: relative;
+    }
+    /* End Hero */
+
+    /* Menu */
+    #menu .menu-info {
+        flex-direction: row
+    }
+    #menu .menu-info .menu-button {
+        margin: 0 10px;
+    }
+    /* End Menu */
+    #menu {
+        height: 600px;
+        min-height: 600px;
+    }
+    #menu .container {
+        min-height: 600px;
+    }
+
+    /* Modal */
+    .modal-content hr {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    /* Contacts */
+    #contacts {
+        height: 600px;
+        min-height: 600px;
+    }
+    #contacts .container {
+        min-height: 600px;
+    }
+    /* Contacts */
+    #contacts .contact-items {
+        display: flex;
+        width: 100%;
+    }
+    #contacts .contact-item {
+        min-height: 180px;
+    }
+    /* End Contacts */
+/* End TAblet */
+
+
+/* Desktop */
+@media only screen and (min-width: 1200px) {
+    /* Header */
+    #header .hamburger {
+        display: none;
+    }
+    #header .nav-list ul {
+        position: initial;
+        display: block;
+        height: auto;
+        width: fit-content;
+        background-color: transparent;
+    }
+    #header .nav-list ul li {
+        display: inline-block;
+    }
+    #header .nav-list ul li a {
+        font-size: 1.8rem;
+    }
+    #header .nav-list ul a::after {
+        display: none;
+    }
+    #menu .flip-card-back {
+        transform: rotateX(180deg)
+    }
+    #menu .flip-card:hover .flip-card-inner {
+        transform: rotateX(180deg);
+    }
+    /* End Header */
+    
+    #contacts .contact {
+        flex-direction: column;
+        padding:100px 0;
+    }
+    /* End Contacts */
+}
+/* End Desktop */
