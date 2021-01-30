@@ -242,7 +242,8 @@ a {
     border-radius: 30px;
     animation: moveInLeft 1s ease backwards;
     animation-delay: 1.5s;
-    max-width: 40%;
+    min-width: 40%;
+    max-width: 50%;
     text-align: center;
 }
 /* End Hero */
@@ -605,9 +606,6 @@ a {
     #hero .hero-info-subheading {
         font-size: 1.6rem;
         margin-top: 1rem;
-    }
-    #hero .hero-info-button {
-        padding: 1rem 5rem;
     }
 } 
 /* TABLET */
