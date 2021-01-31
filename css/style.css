@@ -501,6 +501,7 @@ a {
 /* About */
 #about {
     min-height: 100vh;
+    margin: 10px 0;
 }
 #about .about{
     text-align: center;
@@ -549,6 +550,12 @@ a {
     border-top: 7px solid crimson;
     border-right: 7px solid crimson;
     z-index: -1;
+}
+#about .about:hover .about-info::after{
+    animation: 1s ease moveInBottom;
+}
+#about .about:hover .about-info::before{
+    animation: 1s ease moveInTop;
 }
 #about .about-info h2 {
     font-size: 2rem;
@@ -696,6 +703,36 @@ a {
         transform: translateX(0);
     }
 }
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(150px);
+    }
+
+    50% {
+        opacity: .5;
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes moveInTop {
+    0% {
+        opacity: 0;
+        transform: translateY(-150px);
+    }
+
+    50% {
+        opacity: .5;
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 @keyframes fadeIn {
     0% {
         opacity: 0;
@@ -784,6 +821,11 @@ a {
         width: 90%;
         margin: 0 auto;
     }
+    /* About */
+    #about .about video {
+        max-width: 1200px;
+    }
+    /* End About */
     /* Contacts */
     #contacts {
         height: 600px;
