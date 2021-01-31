@@ -9,8 +9,8 @@
     box-sizing: border-box;
 }
 html{
-    font-family: 'Montserrat', sans-serif;
-    /* font-family: Trumpit, sans-serif; */
+    /* font-family: 'Montserrat', sans-serif; */
+    font-family: Trumpit, sans-serif;
     font-size: 10px;
     scroll-behavior: smooth;
     width: 100vw;
@@ -512,6 +512,7 @@ a {
     height: 100vh;
     object-fit: cover;
     position: absolute;
+    /* overflow: hidden; */
     left: 0px;
     top: 0px;
     z-index: -1;
