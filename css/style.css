@@ -28,6 +28,56 @@ a {
     text-decoration: none;
     color: #000;
 }
+.section-title {
+    font-size: 4rem;
+    margin-bottom: 10px;
+    letter-spacing: .5rem;
+}
+.section-title span {
+    color: crimson;
+    font-size: 4.1rem;
+}
+
+
+
+/* ====  Preloader styles ==== */
+#loader-wrapper{
+    width: 100vw;
+    height: 100vh;
+    background-color: #252328;
+    position: fixed;
+    z-index: 11999;
+}
+#preloader {
+	position:relative;
+    width: 80px;
+    height: 80px;
+    top: 45%;
+    margin: 0 auto;
+}
+#preloader span {
+	position:absolute;
+	border: 8px solid white;
+	border-top: 8px solid transparent;
+	border-radius:999px;
+}
+
+#preloader span:nth-child(1){
+	width:80px;
+	height:80px;
+	border: 8px solid crimson;
+	border-top: 8px solid transparent;
+	animation: spin-1 2s infinite linear;
+}
+#preloader span:nth-child(2){
+	top: 20px;
+	left: 20px;
+	width:40px;
+	height:40px;
+	animation: spin-2 1s infinite linear;
+}
+/* End Loader */
+
 
 /* =================================================================== */
 
@@ -205,8 +255,9 @@ a {
     position: relative;
     color: #fff;
     letter-spacing: .4rem;
-    animation: fadeIn 1s ease;
+    animation: fadeIn 1s ease backwards;
     transition: 1s ease all;
+    animation-delay: 1.7s;
 }
 #hero .hero-info-subheading {
     display: block;
@@ -217,7 +268,7 @@ a {
     text-transform: uppercase;
     letter-spacing: .6rem;
     animation: fadeIn 1s ease backwards;
-    animation-delay: 1s;
+    animation-delay: 2s;
     margin-bottom: 1rem;
 }
 #hero .hero-info-underline{
@@ -228,26 +279,26 @@ a {
     background-color: crimson;
     border-radius: 10px;
     animation: fadeIn 1s ease backwards;
-    animation-delay: 1s;
+    animation-delay: 2.2s;
 }
 #hero .hero-info-button {
+    display: inline-block;
     margin-top: 1rem;
     padding: 1rem 3rem;
+    width: 80%;
     font-size: 2rem;
-    color: #fff;
-    text-decoration: none;
     font-weight: 900;
-    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
     background-color: rgba(220, 20, 60, 0.9);
     border-radius: 30px;
     animation: moveInLeft 1s ease backwards;
-    animation-delay: 1.5s;
-    width: 80%;
-    text-align: center;
+    animation-delay: 2.5s;
 }
 /* End Hero */
 
-/* =================================================================== *
+/* =================================================================== */
 
 /* Menu */
 #menu {
@@ -267,15 +318,6 @@ a {
 }
 #menu .menu-header {
     margin: 0 5rem;
-}
-#menu .menu-header-heading {
-    font-size: 4rem;
-    margin-bottom: 10px;
-    letter-spacing: .5rem;
-}
-#menu .menu-header-heading span {
-    color: crimson;
-    font-size: 4.1rem;
 }
 #menu .menu-header-subheading {
     font-size: 2rem;
@@ -445,7 +487,7 @@ a {
 }
 /* End Modal */
 
-/* =================================================================== *
+/* =================================================================== */
 
 /* Contacts */
 #contacts {
@@ -512,7 +554,7 @@ a {
 }
 /* End Contacts */
 
-/* =================================================================== *
+/* =================================================================== */
 
 /* Footer */
 #footer {
@@ -560,7 +602,7 @@ a {
 }
 /* End Footer */
 
-/* =================================================================== *
+/* =================================================================== */
 
 /* Keyframes */
 @keyframes moveInLeft {
@@ -586,14 +628,33 @@ a {
         opacity: 1;
     }
 }
+@keyframes spin-1 {
+	0% {transform: rotate(360deg); opacity: 1;}
+	50% {transform: rotate(180deg); opacity: 0.5;}
+	100% {transform: rotate(0deg); opacity: 1;}
+}
+@keyframes spin-2 {
+	0% {transform: rotate(0deg); opacity: 0.5;}
+	50% {transform: rotate(180deg); opacity: 1;}
+	100% {transform: rotate(360deg); opacity: 0.5;}
+}
 /* End Keyframes */
 
-/* =================================================================== *
+/* =================================================================== */
 
 /* Media Queries */
 /* Phone */
 @media only screen and (max-width: 400px) {
-
+    .section-title {
+        font-size: 2.8rem;
+        /* margin-bottom: 10px; */
+        letter-spacing: .5rem;
+    }
+    .section-title span {
+        color: crimson;
+        font-size: 2.8rem;
+    }
+    /* Hero */
     #hero .hero-info-underline {
         max-width: 90%;
         text-align: left;
@@ -606,7 +667,15 @@ a {
         font-size: 1.6rem;
         margin-top: 1rem;
     }
-} 
+    /* Menu */
+    #menu .menu-header-subheading {
+        font-size: 1.6rem;
+        text-align: center;
+        font-weight: 500;
+        letter-spacing: .4rem;
+    }
+}
+/* End Phone */
 /* TABLET */
 @media only screen and (min-width: 768px) {
     /* Header */
@@ -616,22 +685,11 @@ a {
     #header .brand h1 span{
         font-size: 2.9rem;
     }
-    /* End Header */
-
     /* Hero */
     #hero .hero-info {
         position: relative;
     }
-    /* End Hero */
-
     /* Menu */
-    #menu .menu-info {
-        flex-direction: row
-    }
-    #menu .menu-info .menu-button {
-        margin: 0 10px;
-    }
-    /* End Menu */
     #menu {
         height: 600px;
         min-height: 600px;
@@ -639,13 +697,17 @@ a {
     #menu .container {
         min-height: 600px;
     }
-
+    #menu .menu-info {
+        flex-direction: row
+    }
+    #menu .menu-info .menu-button {
+        margin: 0 10px;
+    }
     /* Modal */
     .modal-content hr {
         width: 90%;
         margin: 0 auto;
     }
-
     /* Contacts */
     #contacts {
         height: 600px;
@@ -654,7 +716,6 @@ a {
     #contacts .container {
         min-height: 600px;
     }
-    /* Contacts */
     #contacts .contact-items {
         display: flex;
         width: 100%;
@@ -662,7 +723,6 @@ a {
     #contacts .contact-item {
         min-height: 180px;
     }
-    /* End Contacts */
 /* End TAblet */
 
 
@@ -688,18 +748,18 @@ a {
     #header .nav-list ul a::after {
         display: none;
     }
+    /* Menu */
     #menu .flip-card-back {
         transform: rotateX(180deg)
     }
     #menu .flip-card:hover .flip-card-inner {
         transform: rotateX(180deg);
     }
-    /* End Header */
-    
+    /* Contacts */
     #contacts .contact {
         flex-direction: column;
         padding:100px 0;
     }
-    /* End Contacts */
 }
 /* End Desktop */
+/* =================================================================== */

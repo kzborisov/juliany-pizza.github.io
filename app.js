@@ -1,3 +1,6 @@
+// Loader
+$('#loader-wrapper').delay(1500).fadeOut('slow');
+
 // Pizza
 const card_pizza = document.querySelector('#btn-pizza .flip-card');
 const modal_pizza = document.querySelector('#modal-pizza');
