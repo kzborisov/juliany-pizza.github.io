@@ -1,4 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;500&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;500&display=swap'); */
+@font-face {
+    font-family: Trumpit;
+    src: url("../fonts/Trumpit.otf") format("opentype");
+}
 *{
     margin: 0;
     padding: 0;
@@ -6,6 +10,7 @@
 }
 html{
     font-family: 'Montserrat', sans-serif;
+    /* font-family: Trumpit, sans-serif; */
     font-size: 10px;
     scroll-behavior: smooth;
     width: 100vw;
@@ -40,9 +45,9 @@ a {
     font-size: 4.1rem;
 }
 
+/* =================================================================== */
 
-
-/* ====  Preloader styles ==== */
+/* Preloader */
 #loader-wrapper{
     width: 100vw;
     height: 100vh;
@@ -80,10 +85,9 @@ a {
 }
 /* End Loader */
 
-
 /* =================================================================== */
 
-/* header */
+/* Header */
 #header {
 	position: fixed;
 	z-index: 1000;
@@ -412,6 +416,7 @@ a {
 }
 /* End Menu */
 
+/* =================================================================== */
 
 /* Modal */
 .modal-pizza, .modal-pasta, .modal-salad {
@@ -488,6 +493,67 @@ a {
     font-size: 1.3rem;
 }
 /* End Modal */
+
+/* =================================================================== */
+
+/* About */
+#about {
+    min-height: 100vh;
+}
+#about .about{
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 20px;
+}
+#about .about video {
+    z-index: -2;
+    position: absolute;
+    max-height: 100%;
+}
+#about .about-info {
+    background-color: rgba(255, 255, 255, 0.582);
+    width: 75%;
+    object-fit: cover;
+    position: relative;
+    padding: 30px
+}
+#about .about-info::after {
+    content: '';
+    position: absolute;
+    width: 98%;
+    height: 98%;
+    top: 19px;
+    left: -33px;
+    overflow: hidden;
+    border-left: 7px solid crimson;
+    border-bottom: 7px solid crimson;
+    z-index: -1;
+}
+#about .about-info::before {
+    content: '';
+    position: absolute;
+    width: 98%;
+    height: 98%;
+    top: -19px;
+    left: 33px;
+    overflow: hidden;
+    border-top: 7px solid crimson;
+    border-right: 7px solid crimson;
+    z-index: -1;
+}
+#about .about-info h2 {
+    font-size: 2rem;
+    text-align: center;
+    font-weight: 500;
+    letter-spacing: .3rem;
+    padding-bottom: 10px;
+}
+#about .about-info p {
+    font-size: 1.7rem;
+    text-align: justify;
+}
+/* End About */
 
 /* =================================================================== */
 
@@ -725,6 +791,7 @@ a {
     #contacts .contact-item {
         min-height: 180px;
     }
+}
 /* End TAblet */
 
 
