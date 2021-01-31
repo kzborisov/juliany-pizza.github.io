@@ -758,6 +758,9 @@ a {
 /* Media Queries */
 /* Phone */
 @media only screen and (max-width: 400px) {
+    body {
+        min-width: 100vw;
+    }
     .section-title {
         font-size: 2.8rem;
         /* margin-bottom: 10px; */
