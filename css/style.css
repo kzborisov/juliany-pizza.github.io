@@ -659,6 +659,10 @@ a {
         color: crimson;
         font-size: 2.8rem;
     }
+    /* Header */
+    #header .nav-list ul {
+        left: 120%;
+    }
     /* Hero */
     #hero .hero-info-underline {
         max-width: 90%;
