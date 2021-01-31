@@ -9,8 +9,8 @@
     box-sizing: border-box;
 }
 html{
-    /* font-family: 'Montserrat', sans-serif; */
-    font-family: Trumpit, sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    /* font-family: Trumpit, sans-serif; */
     font-size: 10px;
     scroll-behavior: smooth;
     width: 100vw;
@@ -97,6 +97,7 @@ a {
 	height: auto;
 }
 #header .brand h1 {
+    font-family: Trumpit, sans-serif;
     color: #fff;
     font-size: 2.8rem;
 }
@@ -255,6 +256,7 @@ a {
     top: 20%;
 }
 #hero .hero-info-heading {
+    font-family: Trumpit, sans-serif;
     display: block;
     width: fit-content;
     font-size: 4rem;
