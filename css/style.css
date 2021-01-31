@@ -257,7 +257,7 @@ a {
     letter-spacing: .4rem;
     animation: fadeIn 1s ease backwards;
     transition: 1s ease all;
-    animation-delay: 1.7s;
+    animation-delay: 2.2s;
 }
 #hero .hero-info-subheading {
     display: block;
@@ -268,7 +268,7 @@ a {
     text-transform: uppercase;
     letter-spacing: .6rem;
     animation: fadeIn 1s ease backwards;
-    animation-delay: 2s;
+    animation-delay: 2.5s;
     margin-bottom: 1rem;
 }
 #hero .hero-info-underline{
@@ -279,7 +279,7 @@ a {
     background-color: crimson;
     border-radius: 10px;
     animation: fadeIn 1s ease backwards;
-    animation-delay: 2.2s;
+    animation-delay: 2.7s;
 }
 #hero .hero-info-button {
     display: inline-block;
@@ -294,7 +294,7 @@ a {
     background-color: rgba(220, 20, 60, 0.9);
     border-radius: 30px;
     animation: moveInLeft 1s ease backwards;
-    animation-delay: 2.5s;
+    animation-delay: 2.9s;
 }
 /* End Hero */
 

@@ -1,5 +1,5 @@
 // Loader
-$('#loader-wrapper').delay(1500).fadeOut('slow');
+$('#loader-wrapper').delay(2000).fadeOut('slow');
 
 // Pizza
 const card_pizza = document.querySelector('#btn-pizza .flip-card');
