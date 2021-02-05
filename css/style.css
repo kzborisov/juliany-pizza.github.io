@@ -1,4 +1,4 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;500&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;500&display=swap');
 @font-face {
     font-family: Trumpit;
     src: url("../fonts/Trumpit.otf") format("opentype");
@@ -10,7 +10,6 @@
 }
 html{
     font-family: 'Montserrat', sans-serif;
-    /* font-family: Trumpit, sans-serif; */
     font-size: 10px;
     scroll-behavior: smooth;
 }
@@ -100,10 +99,14 @@ a {
     font-family: Trumpit, sans-serif;
     color: #fff;
     font-size: 2.8rem;
+    transition: .5s ease-in color;
 }
 #header .brand h1 span{
     color: crimson;
     font-size: 2.9rem;
+}
+#header .brand h1:hover {
+    color: crimson;
 }
 #header .header {
 	min-height: 8vh;
@@ -165,7 +168,8 @@ a {
 	letter-spacing: initial;
 }
 #header .nav-list ul li:hover a {
-	color: crimson;
+    color: crimson;
+    transition: .5s ease color;
 }
 #header .hamburger {
     height: 60px;
@@ -206,7 +210,7 @@ a {
     width: 100%;
     left: 0;
     background-color: #fff;
-    transition: .3s ease;
+    transition: .5s ease;
     transition-property: top, bottom;
 }
 #header .hamburger .bar::after {
@@ -278,6 +282,7 @@ a {
     animation: fadeIn 1s ease backwards;
     animation-delay: 2.5s;
     margin-bottom: 1rem;
+    transition: .5s ease all;
 }
 #hero .hero-info-underline{
     /* display: block; */
@@ -288,6 +293,7 @@ a {
     border-radius: 10px;
     animation: fadeIn 1s ease backwards;
     animation-delay: 2.7s;
+    transition: .5s ease all;
 }
 #hero .hero-info-button {
     display: inline-block;
@@ -303,6 +309,11 @@ a {
     border-radius: 30px;
     animation: moveInLeft 1s ease backwards;
     animation-delay: 2.9s;
+    transition: .5s ease all;
+}
+#hero .hero-info-button:hover {
+    color: crimson;
+    background-color: #fff;
 }
 /* End Hero */
 
@@ -366,8 +377,8 @@ a {
     transition: .5s ease transform;
     display: block;
 }
-#menu .flip-card-front,
-#menu .flip-card-back {
+#menu .flip-card-front {
+/* #menu .flip-card-back { */
     position: absolute;
     left: 0;
     top: 0;
@@ -395,13 +406,6 @@ a {
     background-size: cover;
     position: relative;
 }
-#menu .flip-card-back {
-    z-index: 10;
-    transform: rotateY(180deg)
-}
-#menu .flip-card:hover .flip-card-inner {
-    transform: rotateY(180deg);
-}
 #menu .flip-card-front .flip-card-heading {
     font-size: 3rem;
     width: 70%;
@@ -413,8 +417,8 @@ a {
     border-radius: 30px;
     background-color: rgba(255, 255, 255, 0.4);
 }
-#menu .flip-card-back .flip-card-heading {
-    font-size: 2rem;
+#menu .flip-card:hover .flip-card-inner {
+    transform: scale(.95);
 }
 /* End Menu */
 
@@ -642,12 +646,35 @@ a {
 /* Footer */
 #footer {
     background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+
+    position: relative;
 }
 #footer .footer {
     min-height: 200px;
     flex-direction: column;
     padding-top: 50px;
     padding-bottom: 10px;
+}
+#footer .back-to-top {
+    width: 7rem;
+    height: 7rem;
+    background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+    position: absolute;
+    top: -3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+}
+
+#footer .back-to-top i {
+    display: block;
+    color: #fff;
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 45%;
+    transform: translateY(-50%);
+    /* transform: translate(-50%, -50%) */
+    /* animation: up 2s infinite; */
 }
 #footer h1 {
     color: #fff;
@@ -804,16 +831,11 @@ a {
     /* Menu */
     #menu {
         height: 600px;
-        min-height: 600px;
-    }
-    #menu .container {
-        min-height: 600px;
-    }
-    #menu .menu-info {
-        flex-direction: row
+        min-height: 100vh;
     }
     #menu .menu-info .menu-button {
         margin: 0 10px;
+        width: 60%;
     }
     /* Modal */
     .modal-content hr {
@@ -867,11 +889,24 @@ a {
         display: none;
     }
     /* Menu */
-    #menu .flip-card-back {
-        transform: rotateX(180deg)
+
+    #menu .container {
+        min-height: 100%;
+    }
+    #menu .menu-info {
+        flex-direction: row;
+        width: 100%
+    }
+    #menu .menu-info .menu-button {
+        margin: 0 10px;
+        width: 33%;
+        height: 45rem;
+    }
+    #menu .flip-card {
+        height: 300px;
     }
     #menu .flip-card:hover .flip-card-inner {
-        transform: rotateX(180deg);
+        transform: scale(.95);
     }
     /* Contacts */
     #contacts .contact {
